@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practise/home_page.dart';
+import 'package:flutter_practise/pages/home_page.dart';
+import 'package:flutter_practise/pages/login_page.dart';
 
 // entry point to start in flutter
 void main() {
@@ -29,7 +30,23 @@ class MyApp extends StatelessWidget {
     final diff; // similar to const but can modify
     */
     return MaterialApp(
-      home: HomePage(),
+      // home: HomePage(),
+      themeMode: ThemeMode.light,
+      //dark theme
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      //light theme
+      theme: ThemeData(
+          // adjust all colors accordingly button
+          primarySwatch: Colors.deepPurple),
+      // is we use / in routes it means deafult route we can use home : HomePage() or use routes
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => new LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+      },
     );
   }
 }

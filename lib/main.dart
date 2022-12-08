@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practise/home_page.dart';
 
 // entry point to start in flutter
 void main() {
@@ -8,6 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   //const MyApp({Key key}) : super(key: key);
+  // constructor is necssery when we are passing the data
   const MyApp({super.key});
 //build ui work done and call it when refresh
   @override
@@ -17,18 +19,17 @@ class MyApp extends StatelessWidget {
       child: Text("Welcome"),
     );
     */
+    // intizalize day
+
+    /* double pi = 3.14;
+    bool ismale = false;
+    num temp = 30.5; // can be int / double value
+    var day = "thursday"; // can be given any value and compiler will decide
+    const pie = 3.14; // value never change
+    final diff; // similar to const but can modify
+    */
     return MaterialApp(
-      home: Material(
-        // use material so that goood ui we made
-        //terminal git init : empty git repository create and it store in system and track
-        // same thing  in server : U sign represent its untracked so to add : git add .  its mean all A->add
-        //git comit used means to finalize. and if we want to message -m "first commit" and press enter then we see all history
-        child: Center(
-          child: Container(
-            child: Text("Welcome"),
-          ),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
